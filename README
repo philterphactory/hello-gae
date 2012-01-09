@@ -1,2 +1,43 @@
 This minimal app contains several very simple sample url handlers that
 can be used to micro-benchmark GAE.
+
+You can see ab-results.xls for some stats.
+
+Highlights:
+
+* google provides an (undocumented, unguaranteed) edge cache for paid apps
+** must use Cache-Control: public where possible
+*** but not where Vary is needed, since it's not respected
+*** http://code.google.com/p/googleappengine/issues/detail?id=4277
+
+* threadsafe=on is effectively broken and should not be used
+*** http://code.google.com/p/googleappengine/issues/detail?id=6323
+
+* memcache is plenty fast
+
+* datastore reads are plenty fast, 20ms per read for small items
+
+* using
+    script: some.application
+  is no faster/slower than using
+    script: some.py
+  if that script then proceeds to use run_wsgi_app()
+
+* performance is darn consistent and predicable
+
+* playing with the app engine tunables provides limited benefits under
+  medium load. The settings act predictably under high load and seem to
+  work as advertised. In particular the best way to prepare for high
+  load is to reserve instances. There seems no other real reason to tune
+  things any further.
+
+* the path from the google frontend to google app engine is relatively slow
+  which is probably mostly due to the speed of light. Hitting the edge takes
+  <20ms basically no matter where you are in the world, and GAE itself
+  reports 5-10ms response times when you don't hit the data store.
+
+  There is some 230ms or more between the google edge in NL and GAE. If
+  you consider that it can take about 5-10 requests to load an actual page,
+  that can have an actual noticeable impact on performance. Having fewer,
+  bigger http requests mitigates the issue: use of sprites and bundling up
+  javascript files helps.

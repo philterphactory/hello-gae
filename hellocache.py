@@ -6,7 +6,8 @@ CONTENT = '<html><head><title>Hello, world!</title></head><body><h1>Hello, world
 CONTENT_LENGTH = len(CONTENT)
 RESPONSE_HEADERS = [
     ('Content-Type', 'text/html'),
-    ('Content-Length', str(CONTENT_LENGTH))
+    ('Content-Length', str(CONTENT_LENGTH)),
+    ('Cache-Control', 'public, max-age=60')
 ]
 
 

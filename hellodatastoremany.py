@@ -11,8 +11,9 @@ class HelloWorld(db.Model):
 
 
 def application(environ, start_response):
-    key_name = "1"
-    obj = HelloWorld.get_or_insert(key_name, content=CONTENT)
+    for i in range(1,10):
+        key_name = str(i)
+        obj = HelloWorld.get_or_insert(key_name, content=CONTENT)
     
     content_length = len(obj.content)
     response_headers = [
