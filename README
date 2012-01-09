@@ -1,0 +1,2 @@
+This minimal app contains several very simple sample url handlers that
+can be used to micro-benchmark GAE.

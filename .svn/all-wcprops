@@ -1,0 +1,77 @@
+K 25
+svn:wc:ra_dav:version-url
+V 33
+/svn/!svn/ver/113/trunk/guestbook
+END
+app.yaml
+K 25
+svn:wc:ra_dav:version-url
+V 41
+/svn/!svn/ver/64/trunk/guestbook/app.yaml
+END
+guestbook7_memcache.py
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/!svn/ver/112/trunk/guestbook/guestbook7_memcache.py
+END
+guestbook4_forms.py
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/svn/!svn/ver/64/trunk/guestbook/guestbook4_forms.py
+END
+guestbook5_datastore.py
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/!svn/ver/64/trunk/guestbook/guestbook5_datastore.py
+END
+guestbook1_helloworld.py
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/!svn/ver/64/trunk/guestbook/guestbook1_helloworld.py
+END
+guestbook8_logging.py
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/!svn/ver/113/trunk/guestbook/guestbook8_logging.py
+END
+index.yaml
+K 25
+svn:wc:ra_dav:version-url
+V 43
+/svn/!svn/ver/64/trunk/guestbook/index.yaml
+END
+guestbook2_webapp.py
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/!svn/ver/64/trunk/guestbook/guestbook2_webapp.py
+END
+index.html
+K 25
+svn:wc:ra_dav:version-url
+V 43
+/svn/!svn/ver/64/trunk/guestbook/index.html
+END
+guestbook9_profiling.py
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/!svn/ver/113/trunk/guestbook/guestbook9_profiling.py
+END
+guestbook6_templates.py
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/!svn/ver/64/trunk/guestbook/guestbook6_templates.py
+END
+guestbook3_users.py
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/svn/!svn/ver/64/trunk/guestbook/guestbook3_users.py
+END

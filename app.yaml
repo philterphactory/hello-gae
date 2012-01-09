@@ -1,0 +1,32 @@
+application: weavrs-dev-hrd
+version: hello
+runtime: python27
+api_version: 1
+threadsafe: true
+
+handlers:
+- url: /hello-static
+  static_files: helloworld.html
+  upload: helloworld.html
+  expiration: 1m
+
+# threadsafe cannot be enabled with CGI handler: helloworld.py
+# - url: /hello-cgi
+#   script: helloworld.py
+
+- url: /hello-wsgi
+  script: hellowsgi.application
+
+- url: /hello-memcache
+  script: hellomemcache.application
+
+- url: /hello-datastore
+  script: hellodatastore.application
+
+# - url: /hello-django
+#   script: djangoappengine.main
+
+- url: /
+  static_files: index.html
+  upload: index.html
+  expiration: 1m
